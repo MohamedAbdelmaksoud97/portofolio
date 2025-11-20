@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  HUBSPOT-THEMED DESIGN SYSTEM (HSL BASED)
+  Extracted & normalized from the HubSpot token list you provided.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors (HubSpot Orange, Slate Neutrals, Light Backgrounds) */
+    --background: 46 30% 98%; /* #FCFCFA */
+    --foreground: 0 0% 12%; /* #1F1F1F */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    /* HubSpot Brand Orange (#FF4800 → HSL: 18°, 100%, 50%) */
+    --primary: 18 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary (derived from HubSpot teal: #2F7579 → 183° 44% 33%) */
+    --secondary: 183 44% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent (HubSpot light coral: #FCC6B1 → 17° 89% 85%) */
+    --accent: 17 89% 85%;
+    --accent-foreground: 0 0% 20%;
+
+    /* Muted background (#F8F5EE → 45° 45% 95%) */
+    --muted: 45 45% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Borders */
+    --border: 0 0% 67%; /* Neutral border from #A8A8A8 derived */
+    --input: 0 0% 67%;
+    --ring: 18 100% 50%;
+
+    /* Status Colors */
+    --destructive: 350 100% 44%; /* #D9002B */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 147 100% 26%; /* #00823A */
+    --warning: 45 87% 51%; /* #EEB117 */
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(var(--primary) / 0.08);
+    --shadow-md: 0 4px 16px -4px hsl(var(--primary) / 0.12);
+    --shadow-lg: 0 8px 32px -6px hsl(var(--primary) / 0.18);
+
+    /* Border Radius */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(18 100% 50%),
+      hsl(183 44% 33%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(18 100% 50%),
+      hsl(17 89% 85%)
+    );
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 18 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 45% 95%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 87%;
+    --sidebar-ring: 18 100% 50%;
+  }
+
+  /* ------- DARK MODE ------- */
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 18 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 183 44% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 17 89% 85%;
+    --accent-foreground: 0 0% 10%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 18 100% 50%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 18 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 18 100% 50%;
+  }
+}
+
+/* -------- BASE TYPOGRAPHY + GLOBALS -------- */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+/* -------- UTILITIES -------- */
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-smooth {
+    box-shadow: var(--shadow-md);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
