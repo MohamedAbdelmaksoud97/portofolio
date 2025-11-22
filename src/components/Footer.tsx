@@ -47,7 +47,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <h3 className="text-2xl font-heading font-bold text-primary mb-4">
-              DevPortfolio
+              MOhamed Abdelmaksoud
             </h3>
             <p className="text-muted-foreground mb-4">
               Full-stack developer crafting modern web experiences with
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} DevPortfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} mohamedabdelmaksoud. All rights reserved.</p>
         </div>
       </div>
     </footer>
